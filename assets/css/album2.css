@@ -1,0 +1,65 @@
+.album {
+  margin:5px;
+  border:3px solid #000;
+  color:#000;
+  font:bold 9pt verdana,arial,helvetica,tahoma,sans-serif; 
+}
+.nav_pane {
+  padding:4px 10px;
+  background-color:#fff;
+  border:1px solid black;
+}
+.nav_pane a {
+  color:#000;
+  text-decoration:none;
+}
+.nav_pane a:hover {
+  color:#666;
+}
+.image_pane {
+  padding:0px 0px 5px 0px;
+  width:180px;
+  border:1px solid black;
+  text-align:center;
+  font-size:7pt;
+}
+.image_pane a {
+  color:#000;
+  text-decoration:none;
+}
+.image_pane a img {
+  margin:5px;
+  border:2px solid #fff;
+  background-color:#000;
+}
+.image_pane a:hover img {
+  border:2px dotted #999;
+  background-color:#fff;
+}
+.image_pane a:hover {
+  color:#666;	
+}
+.image_pane_classic {
+  padding:0px 0px 5px 0px;
+  width:180px;
+  border:1px solid black;
+  text-align:center;
+  font-size:7pt;
+  background-image:url(../images/legacy/paper.jpg);
+}
+.image_pane_classic a {
+  color:#000;
+  text-decoration:none;
+}
+.image_pane_classic a img {
+  margin:5px;
+  border:2px solid #fff;
+  background-color:#000;
+}
+.image_pane_classic a:hover img {
+  border:2px dotted #999;
+  background-color:#fff;
+}
+.image_pane_classic a:hover {
+  color:#666;	
+}

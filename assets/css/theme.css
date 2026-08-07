@@ -1,0 +1,520 @@
+/*----------------------------------
+		Theme540 Architecture
+		Cat Art & Hobbies
+----------------------------------*/
+
+body {	
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 12px;	
+	background-color: #393F45;	
+	color: #333333;
+	background-image: url(../images/legacy/body-bkg.jpg);
+	background-repeat: repeat-x;
+}
+
+.sf_outer_wrapper {
+	width: 900px;   
+	margin: 20px auto;	
+	_margin: 5px auto;	
+}
+
+.sf_extra1 {
+
+}
+
+.sf_wrapper {	
+	width:900px !important;	
+}
+
+/*--------------------------------
+		Top Navigation
+---------------------------------*/
+
+.sf_navigation_top {
+	background-image: url(../images/legacy/nav-bkg.jpg);
+	background-repeat: repeat;	
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-weight: bold;
+	min-height:40px;
+	height:auto !important;
+	height:40px;
+	font-size:13px;	
+}
+
+.sf_navigation_top:after {
+	content: " ";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	font-height: 1px;
+	margin:0px;
+	padding:0px;
+}
+
+.nav {
+	margin:0px;
+	padding:0px;
+	list-style-type:none;
+	height:1%;
+}
+
+.nav:after {
+	content: ".";
+    display: block;
+    visibility: hidden;
+    height: 0;
+    clear: both;
+}
+
+.nav li {
+	float:left;
+	min-height:22px;
+	height:auto !important;
+	height:22px;
+	padding:8px 0px 7px 5px;
+	white-space:nowrap;
+}
+
+.nav li a {
+	color: #2a3035;
+	padding: 4px 7px 5px 5px;
+	text-decoration:none;
+	display:block;
+}
+
+.nav li a:visited {
+	color: #2a3035;
+}
+
+.nav li a:hover{
+	color: #2a3035;
+	background-color: #99A3AF;
+}
+
+/*------------------------------------
+	Flyout menu
+------------------------------------*/
+
+.subnav { /* all lists */
+	padding: 0;
+	margin: 0;
+	list-style: none;	
+}
+
+.nav a {	
+	display:block;	
+}
+
+.subnav li { /* all list items */	
+	float: left;		
+}
+
+.subnav { /* second-level lists */
+	position: absolute;	
+	width: 170px;
+	left: -999em;
+	z-index: 1000;	
+}
+
+.subnav li { /* second-level lists */	
+	width: 170px;
+	background-image: none;
+	white-space: normal;
+	background-color: #D1D7DF;
+	height: auto;
+	padding: 0px;
+}
+
+.subnav li a, 
+.subnav li a:visited  { /* second-level lists */	
+	width: 160px;
+	height: auto;
+	background-image: none;	
+	padding: 5px;
+}
+
+.subnav li a:hover  { /* second-level lists */		
+	width: 160px;
+	height: auto;
+	padding: 5px;
+}
+
+#Nav1 li:hover ul, 
+#Nav1 li.sfhover ul { /* lists nested under hovered list items */
+	left: auto;
+}
+
+#Nav1 iframe {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 0;
+	filter: progid:DXImageTransform.Microsoft.Alpha(style=0,opacity=0);
+}
+
+#Nav1 li:hover, #Nav1 li.hover {  
+    position: static;  
+} 
+
+/*--------------------------------
+		End Top Navigation
+---------------------------------*/
+
+
+.sf_extra10 {
+	
+}
+
+/*--------------------------------
+		Header
+---------------------------------*/
+
+.sf_header_wrapper {	
+	width: 350px;
+	min-height: 615px;
+	height: auto !important;
+	height: 615px;	
+	float: left;
+	display: inline;	
+}
+
+.sf_extra2 {
+	
+}
+
+.sf_main_header {	
+	text-align: center;	
+	overflow: hidden;
+	width: 340px;
+	font-family: Georgia, times, serif;
+	font-size: 32px;
+	font-weight: normal;
+	font-variant: normal;
+	padding: 17px 5px;
+	margin-bottom: 11px;		
+	height: 105px;
+	display: block;	
+}
+
+.sf_main_header div {
+	height: 120px;
+	overflow: hidden;
+}
+
+.sf_main_header div div {
+	height: auto;
+	overflow: visible;
+}
+
+.sf_extra3 {
+	background-image: url(../images/legacy/header-img.jpg); 
+	background-repeat: no-repeat;
+	height: 465px;
+	width: 350px;
+}
+
+.sf_sub_header {
+	display: none;
+}
+
+.sf_main_header p, .sf_sub_header p {
+	margin: 0;
+	padding: 0;
+}
+
+/*--------------------------
+		End Header
+--------------------------*/
+
+.sf_extra4 {
+		
+}
+
+
+
+/*--------------------------------
+		Bottom Navigation
+---------------------------------*/
+
+.sf_navigation {
+	display: none;
+}
+
+.sf_navigation ul {	
+}
+
+.sf_navigation ul:after {
+}
+
+.sf_navigation ul li {
+}
+
+.sf_navigation ul li.sf_last_nav_item {
+}
+
+.sf_navigation ul li.sf_first_nav_item {
+}
+
+.sf_navigation ul li a {	
+}
+
+.sf_navigation ul li a:visited {
+}
+
+.sf_navigation ul li a:hover {
+}
+
+
+/*--------------------------------
+		End Bottom Navigation
+---------------------------------*/
+
+
+
+.sf_extra5 {
+	
+}
+
+
+
+/*--------------------------------
+		 	Page Title
+---------------------------------*/
+
+.sf_pagetitle {	
+	float: right;
+	width: 450px;	
+	margin-right: 42px;	
+	padding-top: 45px;
+	padding-bottom: 10px;	
+	text-align: left;
+	font-size: 20px;
+	font-weight: normal;
+	font-family: Georgia, times, serif;		
+	display: inline;
+}
+
+.sf_pagetitle h1 {
+	font-size:20px;
+	font-weight:normal;
+	margin:0;
+}
+
+/*--------------------------------
+		 End Page Title
+---------------------------------*/
+
+
+
+.sf_extra6 {
+}
+
+
+
+/*--------------------------------
+		 Sub Navigation
+---------------------------------*/
+
+.sf_subnavigation {
+	display: none;
+}
+
+.sf_subnavigation ul{
+	
+}
+
+.sf_subnavigation ul:after{
+	
+}
+
+.sf_subnavigation ul li {
+	
+}
+
+.sf_subnavigation ul li.sf_last_nav_item{
+
+}
+
+.sf_subnavigation ul li.sf_first_nav_item{
+
+}
+
+.sf_subnavigation ul li a {
+	
+}
+
+.sf_subnavigation ul li a:visited {
+	
+}
+
+.sf_subnavigation ul li a:hover{
+	
+}
+
+/*--------------------------------
+		 End Sub Navigation
+---------------------------------*/
+
+.sf_extra11 {
+
+}
+	
+/*--------------------------
+		Content
+--------------------------*/
+
+.sf_content {	
+	float: right;
+	width: 450px;	
+	margin-right: 50px;	
+	padding-bottom: 20px;
+	display: inline;		
+}
+
+.sf_content:after {
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+}
+
+/*--------------------------
+		End Content
+--------------------------*/
+
+
+
+.sf_extra12 {
+	
+}
+
+
+/*--------------------------------
+		 Sub Navigation2
+---------------------------------*/
+
+.sf_subnavigation2 {
+	display: none;
+}
+
+.sf_subnavigation2 ul{
+	
+}
+
+.sf_subnavigation2 ul:after{
+	
+}
+
+.sf_subnavigation2 ul li {
+	
+}
+
+.sf_subnavigation2 ul li.sf_last_nav_item{
+
+}
+
+.sf_subnavigation2 ul li.sf_first_nav_item{
+
+}
+
+.sf_subnavigation2 ul li a {
+	
+}
+
+.sf_subnavigation2 ul li a:visited {
+	
+}
+
+.sf_subnavigation2 ul li a:hover{
+	
+}
+
+/*--------------------------------
+		 End Sub Navigation2
+---------------------------------*/
+
+.sf_extra7 {
+	width: 900px;
+	height: 22px;
+	clear: both;
+	background-image: url(../images/legacy/ftr-bkg.jpg);
+	background-repeat: no-repeat;		
+}
+
+.sf_extra7 span{
+	
+}
+
+/*--------------------------
+		 Footer
+--------------------------*/
+
+.sf_footer {
+	font-family: Arial, Verdana, Helvetica, sans-serif;		
+	text-align:right;
+	min-height:15px;
+	height:auto !important;		
+	height:15px;
+	padding: 5px 10px 5px 10px;	
+	font-size:11px;	
+	background-color: #393F45;			
+}
+
+.sf_footer p {
+	margin:0px;
+	padding:0px;
+}
+
+/*--------------------------
+		End Footer
+--------------------------*/
+
+
+.sf_extra8 {	
+	
+}
+
+.sf_extra9 {	
+}
+
+
+/*--------------------------
+		Extra Stuff
+--------------------------*/
+
+
+a:link {	
+}
+
+a:visited {	
+}
+
+a:hover {	
+}
+
+.sf_banner {
+	font-size: 11px;
+	margin: 40px auto 0 auto;
+	text-align: center;
+}
+
+#bannerLink {
+	padding: 10px;
+	margin: 10px;
+}
+
+#bannerLink a, a:visited, a:hover{
+	color: #96A1AE;
+}
+/**
+ * Sticking flyout menu bug
+ *
+ * @bugfix
+ * @affected ie7
+ * @css-for ie7
+ * @valid yes
+ */
+#Nav1 li:hover, #Nav1 li.hover {  
+    position: static;  
+} 

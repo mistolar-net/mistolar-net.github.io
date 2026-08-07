@@ -1,0 +1,39 @@
+.sf_extra3 { background-image: url(../images/legacy/bg_b6qd.jpg);
+ }
+body { background-color:#393F45; }
+.sf_navigation_top ul li a { color:#2A3035; }
+.sf_navigation_top ul li a:visited { color:#2A3035; }
+.sf_navigation_top ul li a:hover { color:#2A3035; }
+.sf_main_header { color:#FFFFFF; }
+.sf_pagetitle { color:#707EF7; }
+.sf_footer { color:#FFFFFF; }
+.sf_sub_header { color:#None; }
+.sf_main { background-color:#None; }
+.sf_region3 { background-color:#None; }
+.sf_navigation_top { background-color:#None; }
+.sf_navigation_top ul li { background-color:#None; }
+.sf_navigation_top ul li a { background-color:#None; }
+.sf_navigation_top ul li a:hover { background-color:#None; }
+.sfgb_title-bar { color:#000000; }
+.sfgb_paginator { color:#000000; }
+a.sfgb_paginator { color:#000000; }
+a.sfgb_paginator:hover { color:#000000; }
+a.sfgb_paginator:visited { color:#000000; }
+.sfgb_message-title { color:#none; }
+.sfgb_message-text { color:#000000; }
+.sfgb_message-form-panel-body { color:#000000; }
+.sfgb_message-form-panel-body { background-color:#EBEBEB; }
+.sfgb_message-form-panel-error { color:#C00C00; }
+.sfgb_submit-button { color:#000000; }
+a { color:#333333; }
+a:link { color:#333333; }
+a:visited { color:#333333; }
+a:hover { color:#333333; }
+body#page_e570d9df-8217-46ea-8b2e-0cc7ef68164d div#content1 { width:95.15%; }
+body#page_5c2994d1-97cb-40cf-93af-0fd6d3f8fee5 div#content1 { width:95.15%; }
+body#page_6b9e8fca-fe71-4293-b728-2afc12572304 div#content1 { width:95.11%; }
+body#page_01a339e1-7031-4d1e-a8aa-50f5846b3f00 div#content1 { width:95.11%; }
+body#page_0baa29d9-ce45-40ca-9909-6390794a5783 div#content1 { width:95.11%; }
+body#page_26d246d9-ff2e-4eb2-9d76-68cc0b38b2b6 div# { width:100%; }
+body#page_26d246d9-ff2e-4eb2-9d76-68cc0b38b2b6 div#content1 { width:95.11%; }
+body#page_d1eb2d45-9461-4c78-8872-39adde19e26a div#content1 { width:94.89%; }
