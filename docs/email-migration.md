@@ -1,10 +1,10 @@
 # ImprovMX Free migration handoff
 
-**Status:** ImprovMX reports Active and both MX records and SPF are verified in public DNS. Old emails are preserved and the free account, domain, and `admin` alias are configured. The first inbox test used the old Microsoft 365 route. After waiting about two hours, a fresh outside-account test passed through ImprovMX; its log shows delivery accepted by the destination mail server in three seconds. The owner also confirmed receipt of this fresh test in the personal inbox, completing the first verified end-to-end ImprovMX delivery test. Additional outside-account testing, observation, and subscription cancellation remain pending.
+**Status:** ImprovMX forwarding is verified through delivery logs and personal inbox receipt. Old emails are preserved. On 2026-10-03, the owner reported deleting the GoDaddy Microsoft 365 subscription and confirmed forwarding still works in a subsequent test. Subscription deletion is recorded as owner-confirmed; the GoDaddy confirmation and effective service end date have not been inspected. Remaining work includes continued observation, additional outside-account testing, confirmation of billing/domain status, obsolete DNS cleanup, and a final zone export. Do not rely on rollback to the deleted Microsoft 365 service.
 
-**Last updated:** 2026-10-02
+**Last updated:** 2026-10-03
 
-**Last verified:** 2026-10-02: public website contact links, listed live DNS records, the August DNS backup, ImprovMX public plan details, and generic DNS instructions. The owner confirmed the renewal deadline and price on the same date. The owner subsequently supplied ImprovMX alias, DNS setup, and Active-status screenshots on 2026-10-02. After the owner corrected the MX setup, a new screenshot shows green checks for both MX records and SPF. Google and Cloudflare public DNS checks confirm `10 mx1.improvmx.com`, `20 mx2.improvmx.com`, and the reviewed SPF with TTL 1800. A subsequent delivery-log screenshot confirms an outside-account test entered ImprovMX at 20:25:00 PDT and was delivered to the destination mail server at 20:25:03 PDT on 2026-10-02. The owner confirmed that the same test arrived in the personal inbox. The account signup email, destination-verification status, GoDaddy automatic-renewal status, and Microsoft 365 service end date remain unconfirmed.
+**Last verified:** 2026-10-02: public website contact links, listed live DNS records, the August DNS backup, ImprovMX public plan details, and generic DNS instructions. The owner confirmed the renewal deadline and price on the same date. The owner subsequently supplied ImprovMX alias, DNS setup, and Active-status screenshots on 2026-10-02. After the owner corrected the MX setup, a new screenshot shows green checks for both MX records and SPF. Google and Cloudflare public DNS checks confirm `10 mx1.improvmx.com`, `20 mx2.improvmx.com`, and the reviewed SPF with TTL 1800. A subsequent delivery-log screenshot confirms an outside-account test entered ImprovMX at 20:25:00 PDT and was delivered to the destination mail server at 20:25:03 PDT on 2026-10-02. The owner confirmed that the same test arrived in the personal inbox. On 2026-10-03, the owner reported subscription deletion and a further successful ImprovMX forwarding test. The account signup email, destination-verification status, GoDaddy deletion/cancellation confirmation, and Microsoft 365 effective service end date remain unconfirmed here.
 
 Replace the paid GoDaddy Microsoft 365 mailbox for `admin@mistolar.net` with free inbound forwarding through ImprovMX. This document tracks preparation, DNS cutover, testing, rollback, and closeout.
 
@@ -12,14 +12,14 @@ Check off steps only after completing them. Update the status and date when prog
 
 ## Current situation
 
-The website and listed public DNS records were checked on 2026-10-02. Renewal and email-preservation details were supplied by the owner on that date. Existing forwarding and sending habits are carried forward from the handoff; account settings have not been inspected.
+The website and listed public DNS records were checked on 2026-10-02. Renewal and email-preservation details were supplied by the owner on that date; subscription deletion and continued forwarding were reported on 2026-10-03. Existing forwarding and sending habits are carried forward from the handoff; account settings have not been inspected.
 
 - Domain: `mistolar.net`.
 - DNS host and registrar: GoDaddy.
 - Website: GitHub Pages at <https://mistolar.net>.
 - Published email address: `admin@mistolar.net`.
-- GoDaddy Microsoft 365 renews on **2026-10-10 at $60/year**, as confirmed by the owner. Cancel its renewal through GoDaddy before that date; complete the cancellation by **2026-10-09 at the latest**, allowing for the actual billing time shown in the account. Automatic-renewal status and the effective service end date still need confirmation in GoDaddy.
-- The original Microsoft 365 setup forwarded `admin@mistolar.net` to the personal destination address. The same forwarding alias is configured in ImprovMX. On 2026-10-02, the owner sent a test from another email account to `admin@mistolar.net` and received it shortly afterward in the personal inbox; the owner subsequently opened ImprovMX Logs and found no entries under the displayed filters. Received-message headers subsequently confirmed that this first test used the old Microsoft 365 route. After waiting about two hours, the owner sent another test; the ImprovMX log confirms it was received and delivered to the destination mail server at 20:25:03 PDT. The owner confirmed this fresh test arrived in the personal inbox, verifying delivery through ImprovMX end to end.
+- The GoDaddy Microsoft 365 renewal was due on **2026-10-10 at $60/year**, as confirmed by the owner. On **2026-10-03**, the owner reported deleting the subscription, before the planned deadline. Retain the GoDaddy confirmation and verify that no renewal charge is scheduled; the effective service end date and billing status have not been inspected here.
+- The original Microsoft 365 setup forwarded `admin@mistolar.net` to the personal destination address. The same forwarding alias is configured in ImprovMX. On 2026-10-02, the owner sent a test from another email account to `admin@mistolar.net` and received it shortly afterward in the personal inbox; the owner subsequently opened ImprovMX Logs and found no entries under the displayed filters. Received-message headers subsequently confirmed that this first test used the old Microsoft 365 route. After waiting about two hours, the owner sent another test; the ImprovMX log confirms it was received and delivered to the destination mail server at 20:25:03 PDT. The owner confirmed this fresh test arrived in the personal inbox, verifying delivery through ImprovMX end to end. On 2026-10-03, the owner confirmed another successful forwarding test after reporting subscription deletion.
 - No messages are sent or replies made from `admin@mistolar.net`.
 - The owner confirmed on 2026-10-02 that old emails have been preserved and the email-preservation step is complete. No message import into ImprovMX is needed.
 - Only inbound forwarding is needed from the new provider: no mailbox storage, outbound SMTP, calendar, contacts, or migration/import of existing messages into ImprovMX.
@@ -221,7 +221,7 @@ Public checks during cutover also confirmed the four GitHub Pages A values, `www
 - [ ] Confirm website, infrastructure, nameserver, verification, unrelated, and alias-domain records are preserved.
 - [ ] Record the cutover date/time, exact changes, selected TTL, and backup path in the change log.
 
-Do not delete or terminate Microsoft 365 service before ImprovMX forwarding is active and tested. Follow the cancellation procedure below after saving important emails and completing testing and observation; distinguish scheduling cancellation from immediate deletion.
+Microsoft 365 subscription deletion was reported on 2026-10-03, after old emails were preserved and ImprovMX forwarding was verified. A subsequent test still succeeded. Continue observation and closeout; do not restore the old Microsoft MX to a service that may no longer operate.
 
 ## Testing and closeout checklist
 
@@ -232,16 +232,18 @@ Do not delete or terminate Microsoft 365 service before ImprovMX forwarding is a
 - [x] Review the ImprovMX delivery logs and confirm the test passed through ImprovMX (2026-10-02: fresh outside-account test entered the queue at 20:25:00 PDT and shows DELIVERED at 20:25:03 PDT).
 - [x] Record completed test dates and results below without publishing private addresses or message contents; add subsequent results as testing and observation continue.
 - [ ] Recheck the four website contact links listed above and confirm they still address `admin@mistolar.net`.
-- [ ] Observe forwarding for several days and record the observation period.
+- [ ] Observe forwarding for several days and record the observation period (verified ImprovMX test on 2026-10-02 and owner-reported successful test after subscription deletion on 2026-10-03; several-day observation is not yet complete).
 - [x] Confirm all important Microsoft 365 emails have been saved and the saved copies verified before cancelling (step reported complete by the owner on 2026-10-02).
-- [ ] Cancel renewal of only the GoDaddy Microsoft 365 email subscription before 2026-10-10, after successful testing and observation; finish by 2026-10-09 at the latest and account for the actual next charge time.
-- [ ] Record cancellation confirmation, the effective service end date, and confirmation that the $60/year renewal will not be charged.
+- [x] Cancel/delete the GoDaddy Microsoft 365 email subscription before the 2026-10-10 renewal (owner reported subscription deletion on 2026-10-03, after the first verified ImprovMX test; several-day observation remains incomplete).
+- [ ] Retain the GoDaddy deletion/cancellation confirmation, record the effective service end date, and confirm that the $60/year renewal will not be charged (subscription deletion reported by the owner on 2026-10-03; confirmation and billing status have not been inspected here).
 - [ ] Confirm the `mistolar.net` domain registration and DNS hosting remain active and unchanged.
 - [ ] Later compare the mail record inventory with the fresh zone export and remove only records confirmed obsolete, recording exactly which records were removed.
 - [ ] Export another GoDaddy zone file as the final email-migration backup and record its path above.
 - [ ] Update this document's status to complete once all required work is finished.
 
 ### GoDaddy cancellation procedure
+
+The owner reported deleting the subscription on 2026-10-03. The procedure below is retained as reference; the exact action selected in GoDaddy and the effective service end date have not been reviewed.
 
 The public GoDaddy instructions checked on 2026-10-02 describe **Renewals and Billing → Manage Subscriptions → select the Microsoft 365 product → Cancel Plan → Continue to Cancel → Confirm Cancel**. Verify that the selected subscription contains only the email service intended for cancellation, without domain registration, DNS hosting, or other services that must be preserved.
 
@@ -257,6 +259,7 @@ The initial Microsoft-route test and subsequent verified ImprovMX test are recor
 | --- | --- | --- | --- |
 | 2026-10-02 | Owner sent a message from another email account to `admin@mistolar.net`. | Owner confirmed receipt shortly afterward in the personal email account. | Received-message headers confirm Gmail delivered directly to Microsoft, which then forwarded to the personal inbox. This test used the old Microsoft 365 route and does not verify ImprovMX. The subsequent test below confirms delivery through ImprovMX. Private addresses and message contents are omitted. |
 | 2026-10-02, 20:25:00–20:25:03 PDT | Fresh outside-account test after the owner waited about two hours. | ImprovMX Logs show incoming delivery from Gmail to `mx1.improvmx.com`, then DELIVERED to the personal destination mail server in three seconds. | ImprovMX route, destination-server acceptance, and personal inbox receipt confirmed by log evidence and the owner. Continue remaining tests and observation. Private sender/destination addresses and subject are omitted. |
+| 2026-10-03 | Owner tested forwarding after reporting deletion of the GoDaddy Microsoft 365 subscription. | Owner confirmed ImprovMX forwarding continues to work. | Continued operation recorded. Sender account, exact test time, and new log/header evidence were not supplied; do not count this as a confirmed second outside account. Continue observation and closeout. |
 
 ### Log visibility follow-up
 
@@ -264,13 +267,15 @@ On 2026-10-02, the owner supplied a Logs screenshot showing no entries, a date r
 
 The received-message headers now establish the route of the first test. The owner's additional screenshots show `mail-pj2-x0f.google.com` delivering directly to `CO1PEPF00012E63.mail.protection.outlook.com` at **2026-10-03 01:28:50 UTC**, for `admin@mistolar.net`. Subsequent headers show Microsoft internal processing and outbound delivery from `PH0PR06CU001.outbound.protection.outlook.com` (`40.107.208.76`) to the personal inbox at **01:28:56–57 UTC**. These are October 2 in Pacific time. Together, the supplied headers confirm the old Microsoft 365 forwarding route for this message and explain why it has no ImprovMX delivery-log entry. The cause of the old routing is not proven; cached pre-cutover MX records are a plausible explanation.
 
-After waiting about two hours, the owner supplied a new ImprovMX Logs screenshot. At **2026-10-02 20:25:00 PDT**, Gmail delivered the fresh test to `mx1.improvmx.com`. At **20:25:03 PDT**, `mail13.mxsw1.infra.improvmx.com` forwarded it to `hotmail-com.olc.protection.outlook.com`, and the log reports **DELIVERED +3.0 seconds** with a successful SMTP response. This verifies public incoming routing through ImprovMX and acceptance by the destination mail server. The owner subsequently confirmed that this message arrived in the personal inbox. Log/route verification and the first end-to-end ImprovMX delivery test are complete. Continue the remaining outside-account testing and several-day observation before cancellation. The delay is consistent with cached old MX records expiring, though that cache explanation is not independently proven.
+After waiting about two hours, the owner supplied a new ImprovMX Logs screenshot. At **2026-10-02 20:25:00 PDT**, Gmail delivered the fresh test to `mx1.improvmx.com`. At **20:25:03 PDT**, `mail13.mxsw1.infra.improvmx.com` forwarded it to `hotmail-com.olc.protection.outlook.com`, and the log reports **DELIVERED +3.0 seconds** with a successful SMTP response. This verifies public incoming routing through ImprovMX and acceptance by the destination mail server. The owner subsequently confirmed that this message arrived in the personal inbox. Log/route verification and the first end-to-end ImprovMX delivery test are complete. Continue the remaining outside-account testing and several-day observation. The owner subsequently reported subscription deletion on 2026-10-03 and another successful forwarding test. The delay is consistent with cached old MX records expiring, though that cache explanation is not independently proven.
 
 For any further header inspection, the owner's Outlook menu contains **View → View message source**. Examine `Received:` blocks and skip long `ARC-` signature sections. Microsoft entries alone do not establish the old route because the personal destination also uses Microsoft; the direct Gmail-to-Microsoft hop for `admin@mistolar.net` is the decisive evidence in this test. See [Microsoft message-header instructions](https://support.microsoft.com/en-us/outlook/view-internet-message-headers-in-outlook).
 
 ## Rollback
 
-While the Microsoft 365 email service remains active, including any remaining paid period after renewal cancellation is scheduled, rollback is possible by restoring its original MX and SPF values from the saved zone file. Use the immediate pre-cutover backup if it shows changes since the older website-migration backup.
+**Current status:** The owner reported deleting the Microsoft 365 subscription on 2026-10-03. Do not assume the old mailbox or forwarding service remains available. Restoring its DNS records alone cannot reactivate a deleted service.
+
+The historical rollback instructions below applied while Microsoft 365 was still operational, including any remaining paid period after renewal cancellation was scheduled. Use them only if the old service is independently confirmed operational; otherwise retain them solely as a record of the original DNS values. The immediate pre-cutover backup is the rollback baseline.
 
 The original values reported in the handoff are:
 
@@ -305,3 +310,4 @@ Rollback remains available only while Microsoft 365 service actually operates. D
 | 2026-10-02 | Earlier received-message headers confirm the first test used Microsoft 365 forwarding. | Gmail delivered directly to Microsoft for `admin@mistolar.net` at 01:28:50 UTC on October 3 (October 2 locally), followed by Microsoft outbound forwarding. Empty ImprovMX logs are consistent with this route. Allow the old MX cache lifetime and send a fresh outside-account test; ImprovMX delivery remains unverified. |
 | 2026-10-02 | Fresh test is verified in ImprovMX Logs after about two hours of waiting. | Queue entry at 20:25:00 PDT and DELIVERED at 20:25:03 PDT confirm the ImprovMX route and destination-server acceptance. Marked log verification complete; fresh-test inbox confirmation, additional outside-account testing, observation, and subscription cancellation remain pending. |
 | 2026-10-02 | Owner confirmed personal inbox receipt of the test verified in ImprovMX Logs. | The first end-to-end ImprovMX delivery test is complete; marked inbox confirmation complete. Additional outside-account testing, several-day observation, and GoDaddy Microsoft 365 renewal cancellation remain pending. |
+| 2026-10-03 | Owner reported deleting the GoDaddy Microsoft 365 subscription and confirmed forwarding still works in a subsequent test. | Marked subscription cancellation/deletion complete as owner-reported. Retain the GoDaddy confirmation and verify billing/service end details. Removed reliance on Microsoft 365 rollback; observation, remaining testing, obsolete DNS cleanup, and final zone export remain pending. |
